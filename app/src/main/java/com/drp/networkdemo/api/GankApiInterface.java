@@ -40,5 +40,5 @@ import retrofit2.http.Path;
 public interface GankApiInterface {
 
     @GET("data/{category}/{size}/{page}")
-    Observable<GankData<List<GankItem>>> getGankListByCategory(@Path("category") String category, @Path("page") int page, @Path("size") int size);
+    Observable<GankData> getGankListByCategory(@Path("category") String category, @Path("page") int page, @Path("size") int size);
 }

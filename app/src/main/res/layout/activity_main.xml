@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
+
         <variable
             name="presenter"
             type="com.drp.networkdemo.MainActivity" />
     </data>
 
-    <LinearLayout
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp"
-        tools:context=".MainActivity">
-
-        <Button
-            android:onClick="@{presenter.loadGankData}"
-            android:id="@+id/bt_load_gank_data"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="loadGankData" />
-
-    </LinearLayout>
+        android:layout_height="match_parent" />
 </layout>

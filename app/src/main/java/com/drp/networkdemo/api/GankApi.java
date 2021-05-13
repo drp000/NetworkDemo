@@ -92,11 +92,11 @@ public class GankApi extends NetworkApi {
 
     @Override
     public String getFormal() {
-        return "http://gank.io/api/";
+        return "https://gank.io/api/";
     }
 
     @Override
     public String getTest() {
-        return "http://gank.io/api/";
+        return "https://gank.io/api/";
     }
 }

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">NetworkDemo</string>
+    <string name="fragment_content">详情</string>
 </resources>

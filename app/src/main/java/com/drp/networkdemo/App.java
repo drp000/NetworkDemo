@@ -3,6 +3,8 @@ package com.drp.networkdemo;
 
 import android.app.Application;
 
+import com.drp.base.IAppInfo;
+import com.drp.base.model.BasicDataPreferenceUtil;
 import com.drp.network.base.INetworkRequiredInfo;
 import com.drp.network.base.NetworkApi;
 
@@ -37,6 +39,9 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        IAppInfo appInfo = new AppInfo(this);
+        BasicDataPreferenceUtil.init(appInfo);
+
         NetworkApi.init(new INetworkRequiredInfo() {
             @Override
             public String getAppVersionName() {

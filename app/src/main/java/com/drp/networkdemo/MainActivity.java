@@ -14,7 +14,6 @@ import com.drp.networkdemo.api.GankApi;
 import com.drp.networkdemo.api.GankApiInterface;
 import com.drp.networkdemo.beans.GankData;
 import com.drp.networkdemo.beans.GankItem;
-import com.drp.networkdemo.databinding.ActivityMainBinding;
 
 import java.util.List;
 
@@ -23,12 +22,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_main);
-        ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        binding.setPresenter(this);
+        DataBindingUtil.setContentView(this, R.layout.activity_main);
     }
 
-    @SuppressLint("CheckResult")
+    /*@SuppressLint("CheckResult")
     public void loadGankData(View view) {
         GankApi.getService(GankApiInterface.class)
                 .getGankListByCategory("all", 1, 10)
@@ -43,6 +40,6 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "onFailure:" + e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 }));
-    }
+    }*/
 
 }

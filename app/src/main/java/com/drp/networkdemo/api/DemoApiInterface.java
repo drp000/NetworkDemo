@@ -46,5 +46,5 @@ public interface DemoApiInterface {
     Observable<String> login(@Body RequestBody body);
 
     @GET("data/{category}/{size}/{page}")
-    Observable<GankData<List<GankItem>>> getGankListByCategory(@Path("category") String category, @Path("page") int page, @Path("size") int size);
+    Observable<GankData> getGankListByCategory(@Path("category") String category, @Path("page") int page, @Path("size") int size);
 }
